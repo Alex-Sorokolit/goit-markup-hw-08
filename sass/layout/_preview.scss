@@ -1,0 +1,27 @@
+.preview-list__item {
+    flex-basis: calc(100% / 3 - var(--card-gap));
+}
+
+.preview-list__thumb {
+    position: relative;
+}
+
+.preview-list__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.1428;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: var(--text-white);
+    background-color: var(--background-grey-transparent);
+
+    display: inline-block;
+    width: 100%;
+    padding: 27px 0px;
+
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}

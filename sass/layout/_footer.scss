@@ -1,0 +1,121 @@
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: var(--background-dark-gray);
+
+    &__title {
+            margin-bottom: 20px;
+    
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 1.1428;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            color: var(--text-white);
+        }
+    
+        .footer .item:not(:last-child) {
+            margin-right: 10px;
+        }
+    
+       
+
+    &-columns {
+        display: flex;
+        align-items: baseline;
+        }
+    
+    &-column:not(:last-child) {
+        margin-right: 70px;
+        }
+    
+    &-column:last-child {
+        margin-left: auto;
+        }
+    
+    &-logo {
+        display: block;
+        margin-bottom: 20px;
+        }
+}
+
+
+
+
+
+
+/* Address____________________________________ */
+.address {
+    font-style: inherit;
+}
+
+.address-list {
+
+&__item {
+    display: block;
+    margin-bottom: 5px;
+    }
+
+&__link {
+    color: var(--text-gray-alfa);
+    transition: color var(--time-animatio) var(--cubic-bezier);
+    &:hover,
+    &:focus {
+        color: var(--accent);
+    }
+}
+
+&__link--white {
+    color: var(--text-white);
+}
+}
+
+
+
+
+
+
+
+
+
+/* Social________________________________________ */
+
+
+
+
+.social-list__icon--white {
+    fill: var(--background-white);
+}
+
+/* Form__________________________________________ */
+
+.subscribe {
+    display: flex;
+}
+
+.subscribe__email {
+    width: 358px;
+    height: 50px;
+    padding: 15px;
+    margin-right: 12px;
+
+    color: var(--text-white);
+    background-color: transparent;
+    margin-right: 12px;
+    border: 2px solid var(--white-transperent);
+    border-radius: 4px;
+
+    &::placeholder {
+        flex-grow: 1;
+        font-size: 16px;
+        line-height: 1.25;
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.6);
+        }
+}
+
+
+
+.subscribe__icon {
+    margin-left: 10px;
+}

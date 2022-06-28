@@ -1,0 +1,106 @@
+.header {
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    border-bottom: 1px solid var(--border-gray);
+    background-color: var(--background-white);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    z-index: 1;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    margin-right: 93px;
+}
+
+
+
+
+
+/* Nav-list___________________________________________ */
+
+.nav-list {
+    display: flex;
+    &__item {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+    
+            padding-top: 32px;
+            padding-bottom: 32px;
+            position: relative;
+        }
+}
+
+/* Відступи пунктів навігації*/
+.nav-list__item + .nav-list__item {
+    margin-left: 50px;
+}
+/* або так: */
+/* .nav-list .nav-item:not(:last-child) {
+margin-right: 50px;
+} */
+
+
+
+
+.nav-list__link {
+    text-decoration: none;
+    color: var(--text-dark-gray);
+    transition: color var(--time-animatio) var(--cubic-bezier);
+
+    &:hover,
+    &:focus,
+    &--current {
+            color: var(--accent);
+        }
+
+    &--current::after {
+        content: ' ';
+        background-color: var(--accent);
+        height: 4px;
+        width: 100%;
+        border-radius: 2px;
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        }
+}
+
+/* Auth-list___________________________________________ */
+
+.auth-list {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.auth-list__item + .auth-list__item {
+    margin-left: 30px;
+}
+
+.auth-list__link {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 31px;
+    transition: color var(--time-animatio) var(--cubic-bezier);
+    &:hover,
+    &:focus {
+        color: var(--accent);
+        }
+}
+
+.auth-list__icon {
+    margin-right: 10px;
+    fill: currentColor;
+}

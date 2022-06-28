@@ -1,0 +1,50 @@
+/* Variables */
+
+/* Fonts Palet*/
+/* 
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 700; logo
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400; p address
+font-weight: 500; link h3
+font-weight: 700; button h2 h3
+font-weight: 900; h1 */
+/* ----------------------------------------------------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  background-color: var(--background-white);
+  color: var(--text-gray);
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
