@@ -99,7 +99,7 @@
 .privacy__checkbox {
     width: 16px;
     height: 15px;
-    border: 2px solid var(--text-dark-gray);
+    border: 2px solid #212121;
     border-radius: 2px;
     display: flex;
     align-items: center;
@@ -117,8 +117,7 @@
 
     .checkbox:checked+.privacy__text & {
             background-color: var(--accent);
-            /* border: 2px solid transparent; */
-            border: none;
+            border: 2px solid var(--accent);
         }
 }
 
