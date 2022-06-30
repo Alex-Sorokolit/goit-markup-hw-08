@@ -1,12 +1,14 @@
 .card-set {
   display: flex;
   flex-wrap: wrap;
-  margin-top: calc(-1 * var(--card-gap));
-  margin-left: calc(-1 * var(--card-gap));
+  // margin-top: calc(-1 * var(--card-gap));
+  // margin-left: calc(-1 * var(--card-gap));
+  gap: var(--card-gap);
 
   &__item {
-      margin-top: var(--card-gap);
-      margin-left: var(--card-gap);
+      // margin-top: var(--card-gap);
+      // margin-left: var(--card-gap);
+      width: 100%;
     }
 }
 

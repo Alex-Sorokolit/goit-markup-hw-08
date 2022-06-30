@@ -20,18 +20,18 @@
     
        
 
-    &-columns {
-        display: flex;
-        align-items: baseline;
-        }
+    // &-columns {
+    //     display: flex;
+    //     align-items: baseline;
+    //     }
     
-    &-column:not(:last-child) {
-        margin-right: 70px;
-        }
+    // &-column:not(:last-child) {
+    //     margin-right: 70px;
+    //     }
     
-    &-column:last-child {
-        margin-left: auto;
-        }
+    // &-column:last-child {
+    //     margin-left: auto;
+    //     }
     
     &-logo {
         display: block;
@@ -89,9 +89,9 @@
 
 /* Form__________________________________________ */
 
-.subscribe {
-    display: flex;
-}
+// .subscribe {
+//     display: flex;
+// }
 
 .subscribe__email {
     width: 358px;

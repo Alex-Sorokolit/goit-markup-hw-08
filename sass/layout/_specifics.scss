@@ -3,7 +3,7 @@
 }
 
 .specifics-list__item {
-    flex-basis: calc(100% / 4 - var(--card-gap));
+    // flex-basis: calc(100% / 4 - var(--card-gap));
 }
 
 .specifics-list__icon {
@@ -11,9 +11,10 @@
     justify-content: center;
     align-items: center;
     height: 120px;
-    background-color: var(--background-light-gray);
     margin-bottom: 30px;
-}
+
+    background-color: var(--background-light-gray);
+    }
 
 .specifics-list__svg {
     width: 70px;
