@@ -16,7 +16,7 @@
 @media screen and (min-width: 1200px) {
     --card-item-count: 4;
     flex-basis: calc((100% - (var(--card-gap) * 3)) / var(--card-item-count));
-}
+    }
 
 
 }
