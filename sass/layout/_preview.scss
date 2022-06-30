@@ -1,3 +1,6 @@
+.preview {
+    display: none;
+}
 .preview-list__item {
     flex-basis: calc(100% / 3 - var(--card-gap));
 }
