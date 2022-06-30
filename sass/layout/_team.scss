@@ -7,11 +7,25 @@
     box-shadow: var(--shadow);
     border-radius: 0px 0px 4px 4px;
     // width: calc(100% / 4 - var(--card-gap));
+
+@media screen and (min-width: 768px) {
+    --card-item-count: 2;
+    flex-basis: calc((100% - (var(--card-gap) * 1)) / var(--card-item-count));
+    }
+
+@media screen and (min-width: 1200px) {
+    --card-item-count: 4;
+    flex-basis: calc((100% - (var(--card-gap) * 3)) / var(--card-item-count));
 }
+
+
+}
+
 
 &__image {
     margin-left: auto;
     margin-right: auto;
+    object-fit: scale-down;
 }
 }
 
