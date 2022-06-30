@@ -172,16 +172,30 @@
           <ul class="team__list list card-set">
             <li class="team__item card-set__item">
               <picture>
-                <source srcset="" />
-              </picture>
+                <source
+                  srcset="
+                    ./images/webstudio/product_designer-desk-1x.jpg 1x,
+                    ./images/webstudio/product_designer-desk-2x.jpg 2x
+                  "
+                  media="(min-with: 1200px)"
+                />
 
-              <img
-                class="team__image"
-                src="./images/webstudio/product_designer.jpg"
-                alt="Дизайнер"
-                width="270"
-                height="260"
-              />
+                <source
+                  srcset="
+                    ./images/webstudio/product_designer-w270-1x.jpg 1x,
+                    ./images/webstudio/product_designer-w270-2x.jpg 2x
+                  "
+                  media="(min-with: 1200px)"
+                />
+
+                <img
+                  class="team__image"
+                  src="./images/webstudio/product_designer-w270-1x.jpg"
+                  alt="Дизайнер"
+                  width="270"
+                  height="260"
+                />
+              </picture>
 
               <!-- card-text -->
               <div class="card-text">
