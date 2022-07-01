@@ -692,13 +692,13 @@ margin-right: 50px;
 }
 
 .footer {
-  display: none;
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--background-dark-gray);
 }
 .footer__title {
-  margin-bottom: 20px;
+  width: fit-content;
+  margin: 0 auto 20px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.1428;
@@ -706,12 +706,31 @@ margin-right: 50px;
   text-transform: uppercase;
   color: var(--text-white);
 }
-.footer .footer .item:not(:last-child) {
-  margin-right: 10px;
+.footer-column {
+  outline: 1px solid teal;
 }
-.footer-logo {
+.footer__logo {
   display: block;
-  margin-bottom: 20px;
+  width: fit-content;
+  margin: 0 auto 20px;
+}
+.footer-column:not(:last-child) {
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+  }
+  .footer-column:not(:last-child) {
+    width: calc((100% - 60px) / 2);
+    margin-bottom: 0px;
+  }
+  .footer-column:last-child {
+    width: 80%;
+  }
 }
 
 /* Address____________________________________ */
@@ -720,8 +739,8 @@ margin-right: 50px;
 }
 
 .address-list__item {
-  display: block;
-  margin-bottom: 5px;
+  width: fit-content;
+  margin: 0 auto 5px;
 }
 .address-list__link {
   color: var(--text-gray-alfa);
@@ -741,18 +760,16 @@ margin-right: 50px;
 
 /* Form__________________________________________ */
 .subscribe__email {
-  width: 358px;
+  width: 100%;
   height: 50px;
   padding: 15px;
-  margin-right: 12px;
+  margin-bottom: 20px;
   color: var(--text-white);
   background-color: transparent;
-  margin-right: 12px;
   border: 2px solid var(--white-transperent);
   border-radius: 4px;
 }
 .subscribe__email::placeholder {
-  flex-grow: 1;
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
