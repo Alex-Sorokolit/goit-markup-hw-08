@@ -1,5 +1,4 @@
 .header {
-    display: none;
     font-weight: 500;
     line-height: 1.1;
     letter-spacing: 0.02em;
@@ -20,10 +19,44 @@
 }
 
 .header__logo {
-    margin-right: 93px;
+    @media screen and (min-width:768px){
+        margin-right: 88px;
+    }
+    @media screen and (min-width:1200px){
+        margin-right: 93px;
+    }
 }
 
+.menu-button {
+    margin-left: auto;
+    padding: 10px 0px 10px 30px;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    fill: var(--text-black);
+    background: var(--background-white);
+    border: none;
+
+    // box-shadow: 0px 1px 3px rgba(0, 0, 0, 0), 0px 1px 1px rgba(0, 0, 0, 0),
+    //     0px 2px 1px rgba(0, 0, 0, 0);
+
+    // transition: box-shadow var(--time-animatio) var(--cubic-bezier),
+    //     fill var(--time-animatio) var(--cubic-bezier);
+
+    &:hover,
+    &:focus {
+        // box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        //     0px 2px 1px rgba(0, 0, 0, 0.2);
+        fill: var(--accent);
+    }
+}
+
+.menu-button__icon {
+    width: 40px;
+    height: 40px;
+}
 
 
 
@@ -31,14 +64,15 @@
 
 .nav-list {
     display: flex;
+    display: none;
     &__item {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
     
-            padding-top: 32px;
-            padding-bottom: 32px;
-            position: relative;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        position: relative;
         }
 }
 
@@ -81,6 +115,7 @@ margin-right: 50px;
 
 .auth-list {
     display: flex;
+    display: none;
     align-items: center;
     margin-left: auto;
 }
