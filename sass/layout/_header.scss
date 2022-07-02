@@ -140,3 +140,85 @@ margin-right: 50px;
     margin-right: 10px;
     fill: currentColor;
 }
+
+// Mobile menu__________________________________________
+.mob-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    padding-left: 40px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    background-color: var(--background-white);
+}
+
+.mob-close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    padding: 0;
+    // padding: 0px 0px 30px 30px;
+    border: transparent;
+    background-color: transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    fill: var(--text-black);
+    transform: rotate(0deg);
+
+    transition: fill var(--time-animatio) var(--cubic-bezier), transform var(--time-animatio) var(--cubic-bezier);
+    &:hover,
+    &:focus {
+    fill: var(--accent);
+    transform: rotate(90deg);
+    }
+
+    &__icon {
+        width: 40px;
+        height: 40px;
+    
+    }
+}
+
+
+.mob-nav-list {
+    &__item {}
+
+    &__link {
+            font-weight: 500;
+            font-size: 40px;
+            line-height: 1.175;
+            letter-spacing: 0.02em;
+            color: var(--text-dark-gray);
+
+            transition: var(--time-animatio) var(--cubic-bezier);;
+            &:hover,
+            &:focus {
+                color: var(--accent);
+            }
+    }
+
+    &__link--current {}
+}
+
+.mab-auth-list {
+    &__item {}
+    
+    &__link {}
+    
+    &__icon {}
+}
+
+// .mob-social {}
+
+.mob-social-list {
+    &__item {}
+
+    &__link {}
+}
+
