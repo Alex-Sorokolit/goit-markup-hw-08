@@ -587,12 +587,13 @@ p {
   flex-direction: column;
   justify-content: space-between;
   overflow-y: auto;
-  transition: opacity var(--time-animatio) var(--cubic-bezier);
+  transition: opacity var(--time-animatio) var(--cubic-bezier), transform var(--time-animatio) var(--cubic-bezier);
 }
 
 .mob-menu.is-hidden {
   opacity: 0;
   pointer-events: none;
+  transform: scale(0.9);
 }
 
 .mob-close-button {
