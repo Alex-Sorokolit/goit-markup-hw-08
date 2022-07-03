@@ -24,18 +24,16 @@
   <body>
     <header class="header">
       <div class="menu container">
-        <!-- Logo -->
         <a class="logo header__logo" href="./index.html"
           >Web<span class="logo--black">Studio</span></a
         >
 
         <nav class="nav">
-          <!-- Navigation -->
           <ul class="nav-list list">
             <li class="nav-list__item">
-              <a class="nav-list__link link" href="./index.html">Студия</a>
+              <a class="nav-list__link link nav-list__link--current" href="./index.html">Студия</a>
             </li>
-            <li class="nav-list__item nav-list__link--current">
+            <li class="nav-list__item">
               <a class="nav-list__link link" href="./portfolio.html">Портфолио</a>
             </li>
 
@@ -44,7 +42,6 @@
         </nav>
 
         <ul class="auth-list list">
-          <!-- email -->
           <li class="auth-list__item">
             <a class="auth-list__link link" href="mailto:info@devstudio.com">
               <svg class="auth-list__icon" width="16" height="12">
@@ -54,7 +51,6 @@
             >
           </li>
 
-          <!-- Phone -->
           <li class="auth-list__item">
             <a class="auth-list__link link" href="tel:+380961111111">
               <svg class="auth-list__icon" width="10" height="16">
@@ -64,6 +60,99 @@
             >
           </li>
         </ul>
+        <button class="open-menu-button" type="button" data-menu-open>
+          <svg class="menu-button__icon">
+            <use href="./images/icons/icons.svg#icon-menu" width="40" haight="40"></use>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile menu____________________________ -->
+      <div class="mob-menu is-hidden" data-menu>
+        <!-- <div class="mob-menu" data-menu> -->
+        <button class="mob-close-button" data-menu-close>
+          <svg class="mob-close-button__icon">
+            <use href="./images/icons/icons.svg#icon-close-modal-window"></use>
+          </svg>
+        </button>
+        <ul class="mob-nav-list list">
+          <li class="mob-nav-list__item">
+            <a class="mob-nav-list__link link mob-nav-list__link--current" href="./index.html"
+              >Студия</a
+            >
+          </li>
+          <li class="mob-nav-list__item">
+            <a class="mob-nav-list__link link" href="./portfolio.html">Портфолио</a>
+          </li>
+
+          <li class="mob-nav-list__item">
+            <a class="mob-nav-list__link link" href="">Контакты</a>
+          </li>
+        </ul>
+
+        <div class="mob-bottom">
+          <ul class="mob-auth-list list">
+            <li class="mob-auth-list__item">
+              <a class="mob-auth-list__link link mob-tel" href="tel:+380961111111">
+                +38 096 111 11 11</a
+              >
+            </li>
+
+            <li class="mob-auth-list__item">
+              <a class="mob-auth-list__link link mob-mail" href="mailto:info@devstudio.com">
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+
+          <div class="mob-social">
+            <ul class="mob-social-list list">
+              <li class="mob-social-list__item">
+                <a
+                  class="mob-social-list__link link"
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Instagram
+                </a>
+              </li>
+
+              <li class="mob-social-list__item">
+                <a
+                  class="mob-social-list__link link"
+                  href="https://twitter.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Twitter
+                </a>
+              </li>
+
+              <li class="mob-social-list__item">
+                <a
+                  class="mob-social-list__link link"
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Facebook
+                </a>
+              </li>
+
+              <li class="mob-social-list__item">
+                <a
+                  class="mob-social-list__link link"
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -88,7 +177,8 @@
               <button class="filter-list__button" type="button">Маркетинг</button>
             </li>
           </ul>
-          <!-- cards -->
+
+          <!-- cards ___________________________________________-->
           <ul class="portfolio-list list card-set">
             <li class="portfolio-list__item card-set__item">
               <a
@@ -98,7 +188,33 @@
                 rel="noopener nofollow noreferrer"
               >
                 <div class="portfolio-list__thumb">
-                  <img src="./images/portfolio/tehnokryak.jpg" alt="" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/tehnokryak-desk-1x.jpg 1x,
+                        ./images/portfolio/tehnokryak-desk-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/tehnokryak-tab-1x.jpg 1x,
+                        ./images/portfolio/tehnokryak-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/tehnokryak-mob-1x.jpg 1x,
+                        ./images/portfolio/tehnokryak-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+
+                    <img src="./images/portfolio/tehnokryak-mob-1x.jpg" alt="" />
+                  </picture>
 
                   <div class="portfolio-list__overlay">
                     <p class="portfolio-list__description">
@@ -123,7 +239,34 @@
                 rel="noopener nofollow noreferrer"
               >
                 <div class="portfolio-list__thumb">
-                  <img src="./images/portfolio/new-orlean.jpg" alt="" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/new-orlean-desk-1x.jpg 1x,
+                        ./images/portfolio/new-orlean-desk-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/new-orlean-tab-1x.jpg 1x,
+                        ./images/portfolio/new-orlean-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/new-orlean-mob-1x.jpg 1x,
+                        ./images/portfolio/new-orlean-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+
+                    <img src="./images/portfolio/new-orlean-desk-1x.jpg" alt="" />
+                  </picture>
+
                   <div class="portfolio-list__overlay">
                     <p class="portfolio-list__description">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -147,7 +290,34 @@
                 rel="noopener nofollow noreferrer"
               >
                 <div class="portfolio-list__thumb">
-                  <img src="./images/portfolio/seafood.jpg" alt="" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/seafood-desk-1x.jpg 1x,
+                        ./images/portfolio/seafood-desk-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/seafood-tab-1x.jpg 1x,
+                        ./images/portfolio/seafood-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/seafood-mob-1x.jpg 1x,
+                        ./images/portfolio/seafood-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+
+                    <img src="./images/portfolio/seafood-desk-1x.jpg" alt="" />
+                  </picture>
+
                   <div class="portfolio-list__overlay">
                     <p class="portfolio-list__description">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -171,7 +341,33 @@
                 rel="noopener nofollow noreferrer"
               >
                 <div class="portfolio-list__thumb">
-                  <img src="./images/portfolio/prime.jpg" alt="" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/prime-desk-1x.jpg 1x,
+                        ./images/portfolio/prime-desk-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/prime-tab-1x.jpg 1x,
+                        ./images/portfolio/prime-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/prime-mob-1x.jpg 1x,
+                        ./images/portfolio/prime-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+
+                    <img src="./images/portfolio/prime-desk-1x.jpg" alt="" />
+                  </picture>
                   <div class="portfolio-list__overlay">
                     <p class="portfolio-list__description">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -195,7 +391,34 @@
                 rel="noopener nofollow noreferrer"
               >
                 <div class="portfolio-list__thumb">
-                  <img src="./images/portfolio/boxes.jpg" alt="" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/boxes-desk-1x.jpg 1x,
+                        ./images/portfolio/boxes-desk-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/boxes-tab-1x.jpg 1x,
+                        ./images/portfolio/boxes-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/boxes-mob-1x.jpg 1x,
+                        ./images/portfolio/boxes-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+
+                    <img src="./images/portfolio/boxes-desk-1x.jpg" alt="" />
+                  </picture>
+
                   <div class="portfolio-list__overlay">
                     <p class="portfolio-list__description">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -220,7 +443,34 @@
                 rel="noopener nofollow noreferrer"
               >
                 <div class="portfolio-list__thumb">
-                  <img src="./images/portfolio/inspiration.jpg" alt="" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/inspiration-desk-1x.jpg 1x,
+                        ./images/portfolio/inspiration-desk-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/inspiration-tab-1x.jpg 1x,
+                        ./images/portfolio/inspiration-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/inspiration-mob-1x.jpg 1x,
+                        ./images/portfolio/inspiration-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+
+                    <img src="./images/portfolio/inspiration-desk-1x.jpg" alt="" />
+                  </picture>
+
                   <div class="portfolio-list__overlay">
                     <p class="portfolio-list__description">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -244,7 +494,34 @@
                 rel="noopener nofollow noreferrer"
               >
                 <div class="portfolio-list__thumb">
-                  <img src="./images/portfolio/limited-edition.jpg" alt="" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/limited-edition-desk-1x.jpg 1x,
+                        ./images/portfolio/limited-edition-desk-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/limited-edition-tab-1x.jpg 1x,
+                        ./images/portfolio/limited-edition-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/limited-edition-mob-1x.jpg 1x,
+                        ./images/portfolio/limited-edition-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+
+                    <img src="./images/portfolio/limited-edition-desk-1x.jpg" alt="" />
+                  </picture>
+
                   <div class="portfolio-list__overlay">
                     <p class="portfolio-list__description">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -268,7 +545,34 @@
                 rel="noopener nofollow noreferrer"
               >
                 <div class="portfolio-list__thumb">
-                  <img src="./images/portfolio/lab.jpg" alt="" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/lab-desk-1x.jpg 1x,
+                        ./images/portfolio/lab-desk-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/lab-tab-1x.jpg 1x,
+                        ./images/portfolio/lab-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/lab-mob-1x.jpg 1x,
+                        ./images/portfolio/lab-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+
+                    <img src="./images/portfolio/lab-desk-1x.jpg" alt="" />
+                  </picture>
+
                   <div class="portfolio-list__overlay">
                     <p class="portfolio-list__description">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -292,7 +596,34 @@
                 rel="noopener nofollow noreferrer"
               >
                 <div class="portfolio-list__thumb">
-                  <img src="./images/portfolio/growing-business.jpg" alt="" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/growing-business-desk-1x.jpg 1x,
+                        ./images/portfolio/growing-business-desk-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/growing-business-tab-1x.jpg 1x,
+                        ./images/portfolio/growing-business-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/growing-business-mob-1x.jpg 1x,
+                        ./images/portfolio/growing-business-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+
+                    <img src="./images/portfolio/growing-business-desk-1x.jpg" alt="" />
+                  </picture>
+
                   <div class="portfolio-list__overlay">
                     <p class="portfolio-list__description">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -316,7 +647,7 @@
       <div class="container footer-columns">
         <div class="adress-column footer-column">
           <!-- Logo -->
-          <a class="footer-logo link logo" href="./index.html"
+          <a class="footer__logo link logo" href="./index.html"
             >Web<span class="logo--white">Studio</span></a
           >
 
@@ -332,13 +663,13 @@
                   >г. Киев, пр-т Леси Украинки, 26</a
                 >
               </li>
-              <li class="item">
+              <li class="address-list__item">
                 <a class="address-list__link link" href="mailto:info@example.com"
                   >info@example.com</a
                 >
               </li>
               <!-- Phone -->
-              <li class="item">
+              <li class="address-list__item">
                 <a class="address-list__link link" href="tel:+380991111111">+38 099 111 11 11</a>
               </li>
             </ul>
@@ -348,7 +679,7 @@
           <h2 class="footer__title">присоединяйтесь</h2>
 
           <!-- social -->
-          <ul class="social-list list">
+          <ul class="social-list footer__social-list list">
             <li class="social-list__item">
               <a
                 class="social-list__circle social-list__circle--transparent"
@@ -402,6 +733,7 @@
             </li>
           </ul>
         </div>
+        <!-- subscribe -->
         <div class="form-column footer-column">
           <p class="footer__title">Подпишитесь на рассылку</p>
           <form class="subscribe">
@@ -433,5 +765,6 @@
 
       document.body.style.paddingTop = `${pageHeaderHeight}px`;
     </script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
