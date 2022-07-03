@@ -24,8 +24,9 @@
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
 
-    min-width: 528px;
-    min-height: 581px;
+    min-width: 290px;
+    min-height: 609px;
+
     background-color: var(--background-white);
     border-radius: 4px;
     padding: 40px;
@@ -35,6 +36,14 @@
     .backdrop.is-hidden & {
             transform: translate(-50%, -50%) scale(0.9);
         }
+@media screen and (min-width:480px){
+    min-width: 450px;
+        min-height: 609px;
+}
+@media screen and (min-width:1200px) {
+    min-width: 528px;
+    min-height: 581px;
+}
 }
 
 .close-button {
