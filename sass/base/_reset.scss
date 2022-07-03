@@ -29,6 +29,10 @@ body {
   line-height: 1.7;
   letter-spacing: 0.03em;
 }
+
+body.no-scroll {
+  position: fixed;
+}
 img {
   display: block;
   max-width: 100%;

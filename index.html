@@ -60,7 +60,7 @@
             >
           </li>
         </ul>
-        <button class="menu-button" type="button">
+        <button class="open-menu-button" type="button" data-menu-open>
           <svg class="menu-button__icon">
             <use href="./images/icons/icons.svg#icon-menu" width="40" haight="40"></use>
           </svg>
@@ -68,8 +68,9 @@
       </div>
 
       <!-- Mobile menu____________________________ -->
-      <div class="mob-menu">
-        <button class="mob-close-button" data-modal-close>
+      <div class="mob-menu is-hidden" data-menu>
+        <!-- <div class="mob-menu" data-menu> -->
+        <button class="mob-close-button" data-menu-close>
           <svg class="mob-close-button__icon">
             <use href="./images/icons/icons.svg#icon-close-modal-window"></use>
           </svg>
@@ -948,6 +949,8 @@
 
       document.body.style.paddingTop = `${pageHeaderHeight}px`;
     </script>
+    <!-- <script src="./js/menu.js"></script> -->
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
