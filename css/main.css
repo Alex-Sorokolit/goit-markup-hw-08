@@ -229,7 +229,7 @@ p {
   fill: var(--icon-gray);
   transition: fill var(--time-animatio) var(--cubic-bezier);
 }
-.social-list__icon__circle:hover .social-list__icon, .social-list__icon__circle:focus .social-list__icon {
+.social-list__circle:hover .social-list__icon, .social-list__circle:focus .social-list__icon {
   fill: var(--background-white);
 }
 .social-list__circle--transparent {
@@ -468,6 +468,7 @@ p {
   fill: var(--text-black);
   background: var(--background-white);
   border: none;
+  transition: fill var(--time-animatio) var(--cubic-bezier);
 }
 .open-menu-button:hover, .open-menu-button:focus {
   fill: var(--accent);

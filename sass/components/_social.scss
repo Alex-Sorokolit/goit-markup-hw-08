@@ -31,9 +31,9 @@
                         
         transition: fill var(--time-animatio) var(--cubic-bezier);
                         
-        &__circle:hover &,
-        &__circle:focus & {
-            fill: var(--background-white);
+        .social-list__circle:hover &,
+        .social-list__circle:focus & {
+        fill: var(--background-white);
         }
 }
 
