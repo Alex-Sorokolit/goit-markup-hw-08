@@ -206,7 +206,7 @@ margin-right: 50px;
     &__link--current {}
 }
 
-.mab-auth-list {
+.mob-auth-list {
     &__item {}
     
     &__link {}
@@ -214,11 +214,47 @@ margin-right: 50px;
     &__icon {}
 }
 
+.mob-tel {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.176;
+    letter-spacing: 0.02em;
+    color: var(--accent);
+}
+
+.mob-mail {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: var(--text-gray);
+}
 // .mob-social {}
 
 .mob-social-list {
-    &__item {}
 
-    &__link {}
+    &__item {
+        display: inline-block;
+    }
+    &__item:not(:last-child) {
+        border-right: 1px solid var(--text-gray);
+        padding: 0 10px;
+        }
+
+    &__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+
+    color: var(--accent);
+    }
+
+&__link:not(:last-child) {
+    border-right: 1px solid red;
+    background-color: teal;
 }
+}
+
+
 

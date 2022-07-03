@@ -578,6 +578,41 @@ margin-right: 50px;
 .mob-nav-list__link:hover, .mob-nav-list__link:focus {
   color: var(--accent);
 }
+.mob-tel {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.176;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+}
+
+.mob-mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+  color: var(--text-gray);
+}
+
+.mob-social-list__item {
+  display: inline-block;
+}
+.mob-social-list__item:not(:last-child) {
+  border-right: 1px solid var(--text-gray);
+  padding: 0 10px;
+}
+.mob-social-list__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+}
+.mob-social-list__link:not(:last-child) {
+  border-right: 1px solid red;
+  background-color: teal;
+}
+
 .hero.section {
   padding-top: 200px;
   padding-bottom: 200px;
