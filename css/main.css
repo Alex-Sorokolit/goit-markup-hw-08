@@ -159,6 +159,7 @@ p {
   font-size: 16px;
   line-height: 1.8;
   letter-spacing: 0.06em;
+  cursor: pointer;
   color: var(--text-white);
   background-color: var(--accent);
   border: 1px solid transparent;
@@ -587,13 +588,13 @@ p {
   flex-direction: column;
   justify-content: space-between;
   overflow-y: auto;
-  transition: opacity var(--time-animatio) var(--cubic-bezier), transform var(--time-animatio) var(--cubic-bezier);
+  transform: translateX(0%);
+  transition: transform var(--time-animatio) var(--cubic-bezier);
 }
 
 .mob-menu.is-hidden {
-  opacity: 0;
   pointer-events: none;
-  transform: scale(0.9);
+  transform: translateX(100%);
 }
 
 .mob-close-button {
@@ -608,6 +609,7 @@ p {
   align-items: center;
   fill: var(--text-black);
   transform: rotate(0deg);
+  cursor: pointer;
   transition: fill var(--time-animatio) var(--cubic-bezier), transform var(--time-animatio) var(--cubic-bezier);
 }
 .mob-close-button:hover, .mob-close-button:focus {
