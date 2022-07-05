@@ -696,14 +696,19 @@ p {
 }
 
 .hero.section {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+}
+@media screen and (min-width: 1200px) {
+  .hero.section {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 .hero {
   /* background-color: var(--background-dark-gray); */
   text-align: center;
-  max-width: 480px;
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/backgrounds/header-background-mob.jpg);
@@ -718,7 +723,6 @@ p {
 }
 @media screen and (min-width: 768px) {
   .hero {
-    max-width: 768px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/backgrounds/header-background-tab.jpg);
   }
 }
