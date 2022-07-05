@@ -26,12 +26,16 @@
 .section {
     padding: 60px 0px;
     &__title {
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         font-weight: 700;
         font-size: 36px;
         line-height: 1.2;
         text-align: center;
         letter-spacing: 0.03em;
+
+        @media screen and(min-width:1200px) {
+            margin-bottom: 50px;
+        }
     }
 
     @media screen and (min-width: 1200px) {
