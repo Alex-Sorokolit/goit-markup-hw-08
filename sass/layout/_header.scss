@@ -136,8 +136,7 @@ display: block;
         .auth-list__link {
             display: flex;
             // align-items: center;
-            padding-top: 10px;
-            // padding-bottom: 10px;
+            margin-bottom: 10px;
             transition: color var(--time-animatio) var(--cubic-bezier);
 
             &:hover,
@@ -155,6 +154,10 @@ display: block;
     display: flex;
     align-items: center;
     margin-left: auto;
+
+    .auth-list__link {
+    margin-bottom: 0px;}
+
 
 
 .auth-list__item+.auth-list__item {
@@ -307,18 +310,18 @@ display: block;
 // .mob-social {}
 
 .mob-social-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 
     &__item {
         display: inline-block;
     }
     &__item:not(:last-child) {
         border-right: 1px solid var(--border-grey);
-        padding: 0 10px;
+        padding-right: 10px;
         }
 
-    &__item:first-child {
-        padding-left: 0;
-        }
 
     &__link {
     font-weight: 500;
@@ -335,10 +338,6 @@ display: block;
         }
     }
 
-&__link:not(:last-child) {
-    border-right: 1px solid red;
-    background-color: teal;
-}
 
 }
 
