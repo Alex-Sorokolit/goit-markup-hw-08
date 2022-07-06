@@ -1202,7 +1202,6 @@ p {
   position: absolute;
   bottom: 0;
   left: 0;
-  overflow-y: auto;
   /* animation */
   transition: transform var(--time-animatio) var(--cubic-bezier), opacity var(--time-animatio) var(--cubic-bezier);
   transform: translateY(100%);
