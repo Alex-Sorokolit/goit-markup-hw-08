@@ -546,8 +546,9 @@ p {
     margin-left: auto;
   }
   .auth-list .auth-list__link {
+    font-size: 12px;
     display: flex;
-    margin-bottom: 10px;
+    align-items: center;
     transition: color var(--time-animatio) var(--cubic-bezier);
   }
   .auth-list .auth-list__link:hover, .auth-list .auth-list__link:focus {
@@ -557,14 +558,21 @@ p {
     margin-right: 10px;
     fill: currentColor;
   }
+  .auth-list .auth-list__item:first-child {
+    margin-bottom: 10px;
+  }
 }
-@media screen and (min-width: 768px) and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .auth-list {
     display: flex;
     align-items: center;
     margin-left: auto;
   }
   .auth-list .auth-list__link {
+    margin-bottom: 0px;
+    font-size: 14px;
+  }
+  .auth-list .auth-list__item:first-child {
     margin-bottom: 0px;
   }
   .auth-list .auth-list__item + .auth-list__item {
@@ -583,6 +591,9 @@ p {
   .auth-list .auth-list__icon {
     margin-right: 10px;
     fill: currentColor;
+  }
+  .auth-list .auth-list__item {
+    margin-bottom: 0px;
   }
 }
 
@@ -964,10 +975,9 @@ p {
 .footer-columns {
   text-align: center;
 }
-@media screen and (min-width: 1200px) {
-  .footer-columns {
-    text-align: start;
-  }
+.footer__logo {
+  display: block;
+  margin-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
   .footer-columns {
@@ -987,9 +997,10 @@ p {
 }
 @media screen and (min-width: 1200px) {
   .footer-columns {
+    text-align: start;
     flex-wrap: nowrap;
     display: flex;
-    gap: 60px;
+    gap: 70px;
     justify-content: start;
   }
   .footer-column:not(:last-child) {
@@ -999,10 +1010,6 @@ p {
   .footer-column:last-child {
     margin-left: auto;
     width: fit-content;
-  }
-  .footer__logo {
-    display: block;
-    margin-bottom: 20px;
   }
   .footer__social-list {
     justify-content: start;
@@ -1072,6 +1079,7 @@ p {
   .subscribe__email {
     width: 358px;
     margin-right: 12px;
+    margin-bottom: 0px;
   }
 
   .subscribe__button {
@@ -1194,6 +1202,7 @@ p {
   position: absolute;
   bottom: 0;
   left: 0;
+  overflow-y: auto;
   /* animation */
   transition: transform var(--time-animatio) var(--cubic-bezier), opacity var(--time-animatio) var(--cubic-bezier);
   transform: translateY(100%);
@@ -1207,8 +1216,12 @@ p {
   line-height: 1.56;
   letter-spacing: 0.03em;
   color: var(--text-white);
-  padding: 77px 24px;
-  overflow-y: auto;
+  padding: 24px 24px;
+}
+@media screen and (min-width: 480px) {
+  .portfolio-list__description {
+    padding: 77px 24px;
+  }
 }
 @media screen and (min-width: 768px) {
   .portfolio-list__description {
