@@ -6,7 +6,7 @@
 }
 }
 .preview-list__item {
-    flex-basis: calc(100% / 3 - var(--card-gap));
+--card-item-count: 3;
 }
 
 .preview-list__thumb {

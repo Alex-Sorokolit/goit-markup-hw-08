@@ -844,7 +844,7 @@ p {
 }
 
 .preview-list__item {
-  flex-basis: calc(33.3333333333% - var(--card-gap));
+  --card-item-count: 3;
 }
 
 .preview-list__thumb {
@@ -1085,8 +1085,7 @@ p {
 .filter-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  row-gap: 15px;
+  gap: 15px 8px;
   justify-content: start;
   margin-bottom: 40px;
   justify-content: start;
@@ -1095,22 +1094,13 @@ p {
   .filter-list {
     margin-bottom: 30px;
     justify-content: center;
+    gap: 0px 8px;
   }
 }
 @media screen and (min-width: 1200px) {
   .filter-list {
     margin-bottom: 50px;
   }
-}
-
-@media screen and (min-width: 480) {
-  .filter-list__item {
-    margin-bottom: 0;
-  }
-}
-
-.filter-list__item:not(:last-child) {
-  margin-right: 10px;
 }
 
 .filter-list__button {
