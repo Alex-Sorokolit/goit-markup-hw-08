@@ -1,18 +1,19 @@
 .portfolio-list {
 &__item {
-    display: block;
+    --card-gap: 30px;
+    // display: block;
     
     background-color: var(--background-white);
     // width: calc(100% / 3 - var(--card-gap));
 
     @media screen and (min-width: 768px) {
         --card-item-count: 2;
-        flex-basis: calc((100% - (var(--card-gap) * 1)) / var(--card-item-count));
+        // flex-basis: calc((100% - (var(--card-gap) * 1)) / var(--card-item-count));
         }
 
     @media screen and (min-width: 1200px) {
         --card-item-count: 3;
-        flex-basis: calc((100% - (var(--card-gap) * 2)) / var(--card-item-count));
+        // flex-basis: calc((100% - (var(--card-gap) * 2)) / var(--card-item-count));
         }
         }
 
@@ -78,6 +79,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
+    overflow: auto;
 
     /* animation */
     transition: transform var(--time-animatio) var(--cubic-bezier),opacity var(--time-animatio) var(--cubic-bezier);

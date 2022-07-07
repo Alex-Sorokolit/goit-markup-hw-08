@@ -180,6 +180,9 @@ p {
   flex-wrap: wrap;
   gap: var(--card-gap);
 }
+.card-set__item {
+  flex-basis: calc((100% - (var(--card-item-count) - 1) * var(--card-gap)) / var(--card-item-count));
+}
 
 .logo {
   font-family: var(--font-decor);
@@ -795,13 +798,11 @@ p {
 @media screen and (min-width: 768px) {
   .specifics-list__item {
     --card-item-count: 2;
-    flex-basis: calc((100% - var(--card-gap) * 1) / var(--card-item-count));
   }
 }
 @media screen and (min-width: 1200px) {
   .specifics-list__item {
     --card-item-count: 4;
-    flex-basis: calc((100% - var(--card-gap) * 3) / var(--card-item-count));
   }
 }
 
@@ -879,13 +880,11 @@ p {
 @media screen and (min-width: 768px) {
   .team__item {
     --card-item-count: 2;
-    flex-basis: calc((100% - var(--card-gap) * 1) / var(--card-item-count));
   }
 }
 @media screen and (min-width: 1200px) {
   .team__item {
     --card-item-count: 4;
-    flex-basis: calc((100% - var(--card-gap) * 3) / var(--card-item-count));
   }
 }
 .team__image {
@@ -917,18 +916,15 @@ p {
 
 .company-list__item {
   --card-item-count: 2;
-  flex-basis: calc((100% - var(--card-gap) * 1) / var(--card-item-count));
 }
 @media screen and (min-width: 768px) {
   .company-list__item {
     --card-item-count: 3;
-    flex-basis: calc((100% - var(--card-gap) * 2) / var(--card-item-count));
   }
 }
 @media screen and (min-width: 1200px) {
   .company-list__item {
     --card-item-count: 6;
-    flex-basis: calc((100% - var(--card-gap) * 5) / var(--card-item-count));
   }
 }
 
@@ -1138,19 +1134,17 @@ p {
 }
 
 .portfolio-list__item {
-  display: block;
+  --card-gap: 30px;
   background-color: var(--background-white);
 }
 @media screen and (min-width: 768px) {
   .portfolio-list__item {
     --card-item-count: 2;
-    flex-basis: calc((100% - var(--card-gap) * 1) / var(--card-item-count));
   }
 }
 @media screen and (min-width: 1200px) {
   .portfolio-list__item {
     --card-item-count: 3;
-    flex-basis: calc((100% - var(--card-gap) * 2) / var(--card-item-count));
   }
 }
 .portfolio-list__link {
@@ -1202,6 +1196,7 @@ p {
   position: absolute;
   bottom: 0;
   left: 0;
+  overflow: auto;
   /* animation */
   transition: transform var(--time-animatio) var(--cubic-bezier), opacity var(--time-animatio) var(--cubic-bezier);
   transform: translateY(100%);
